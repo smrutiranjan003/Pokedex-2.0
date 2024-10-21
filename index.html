@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="pokedex.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+            <img src="pokeball.jpg" id="logo" alt="Pokeball" />
+            <h1>Pokedex</h1>
+        </div>
+        <div id="search-container">
+            <input type="text" id="search" placeholder="Search Pokemon..." oninput="filterPokemon()" />
+            <button id="mode-toggle" title="Toggle Dark Mode"><i class="fas fa-sun"></i></button>
+        </div>
+    </header>
+    <div id="content-box">
+        <!-- Left Side, display pokemon info -->
+        <div id="pokemon-info">
+            <img id="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Pokemon">
+            <div id="pokemon-types"></div>
+            <div id="pokemon-description"></div>
+            <div id="pokemon-height"></div> <!-- Height -->
+            <div id="pokemon-weight"></div> <!-- Weight -->
+        </div>
+        <!-- Right side, display pokemon list -->
+        <div id="pokemon-list"></div>
+        <div id="suggestions"></div>
+    </div>
+    <footer>
+        <p>&copy; Smruti Ranjan 2024</p>
+    </footer>
+    <script src="pokedex.js"></script>
+</body>
+</html>

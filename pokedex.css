@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    transition: background 0.5s, color 0.5s;
+}
+
+body.dark {
+    background: #333;
+    color: #f9f9f9;
+}
+
+header {
+    background: #4CAF50; /* Change header color */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Relative positioning to contain the logo */
+    border-radius: 10px; /* Curvy edges for header */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 50px; /* Adjust size */
+    height: 50px; /* Adjust size */
+    border-radius: 50%; /* Make the image circular */
+    animation: spin 5s infinite linear;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+#search-container {
+    display: flex;
+    align-items: center;
+}
+
+#search {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px; /* Curvy edges for search input */
+}
+
+#mode-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff; /* Change icon color for visibility */
+}
+
+#content-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#pokemon-info {
+    width: 60%;
+    border: 2px solid #4CAF50;
+    border-radius: 10px; /* Curvy edges for Pokémon info box */
+    padding: 15px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#pokemon-img {
+    width: 250px; /* Increase size */
+    height: 250px; /* Increase size */
+    object-fit: contain;
+    border-radius: 10px; /* Curvy edges for Pokémon image */
+}
+
+#pokemon-types {
+    margin: 10px 0;
+}
+
+.type {
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    color: white;
+}
+
+.grass { background: green; }
+.poison { background: purple; }
+.electric { background: yellow; color: black; }
+.fire { background: red; }
+.water { background: blue; }
+.bug { background: #A8B400; }
+.normal { background: #A8A8A8; }
+.fighting { background: #A02020; }
+.rock { background: #BFB038; }
+.ground { background: #D2B755; }
+.ice { background: #A8D8D8; }
+.fairy { background: #F49FC3; }
+.psychic { background: #F038A8; }
+.fly { background: #B0B0F0; }
+
+#pokemon-description,
+#pokemon-height,
+#pokemon-weight {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#pokemon-list {
+    width: 35%;
+    padding-left: 20px;
+    overflow-y: scroll;
+    max-height: 500px; /* Set max height for scrolling */
+}
+
+.pokemon-name {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    border-radius: 5px; /* Curvy edges for Pokémon names */
+    transition: background 0.3s;
+}
+
+.pokemon-name:hover {
+    background: #e0e0e0;
+}
+
+#suggestions {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 10;
+    max-height: 200px; /* Set max height for suggestions */
+    overflow-y: auto;
+    width: calc(100% - 20px); /* Make suggestions width same as search bar */
+    margin-top: 5px; /* Add some space between search bar and suggestions */
+    border-radius: 5px; /* Curvy edges for suggestions */
+}
+
+.suggestion {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.suggestion:hover {
+    background: #f0f0f0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4CAF50;
+    color: white;
+    border-radius: 0 0 10px 10px; /* Curvy edges for footer */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
